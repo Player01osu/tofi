@@ -97,6 +97,10 @@ void input_handle_keypress(struct tofi *tofi, xkb_keycode_t keycode)
 			|| ((key == KEY_C || key == KEY_LEFTBRACE) && ctrl)) {
 		tofi->closed = true;
 		return;
+	} else if (key == KEY_ENTER && shift) {
+		tofi->submit = true;
+		tofi->submit_raw = true;
+		return;
 	} else if (key == KEY_ENTER || key == KEY_KPENTER) {
 		tofi->submit = true;
 		return;

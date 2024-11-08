@@ -74,6 +74,10 @@ the form **--key=value**.
 
 > Confirm the current selection and quit.
 
+\<Shift\>-\<Enter\>
+
+> Confirm the current input and quit.
+
 \<Escape\> \| \<Ctrl\>-c \| \<Ctrl\>-\[
 
 > Quit without making a selection.
