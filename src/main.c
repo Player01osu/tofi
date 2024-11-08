@@ -1040,6 +1040,10 @@ static bool do_submit(struct tofi *tofi)
 			drun_print(path, tofi->default_terminal);
 		}
 	} else {
+		if (tofi->submit_raw) {
+			tofi->submit_raw = false;
+			res = entry->input_utf8;
+		}
 		if (entry->mode == TOFI_MODE_PLAIN && tofi->print_index) {
 			for (size_t i = 0; i < entry->commands.count; i++) {
 				if (res == entry->commands.buf[i].string) {

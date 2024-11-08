@@ -53,6 +53,7 @@ struct tofi {
 	struct xkb_keymap *xkb_keymap;
 
 	/* State */
+	bool submit_raw;
 	bool submit;
 	bool closed;
 	int32_t output_width;
